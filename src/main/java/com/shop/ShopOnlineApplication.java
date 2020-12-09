@@ -19,9 +19,9 @@ public class ShopOnlineApplication {
 	public OpenAPI customOpenAPI() {
 		return new OpenAPI()
 				.info(new Info()
-						.title("Spring boot training  API")
+						.title("Spring boot shop_online API")
 						.version("1.0")
-						.description("Spring training api description")
+						.description("Spring shop_online	 api description")
 						.termsOfService("http://swagger.io/terms/")
 						.license(new License().name("Apache 2.0").url("http://springdoc.org")));
 	}

@@ -1,4 +1,4 @@
-package com.shop.model.entity;
+package com.shop.model;
 
 import javax.persistence.*;
 import java.util.List;
@@ -17,7 +17,11 @@ public class Cart {
     @Column(name = "QUANTITY_OF_PRODUCTS", nullable = false)
     private double quantityOfProducts;
 
+
     private List<Product> productList;
+
+    @OneToOne
+    @JoinColumn(name = "PAYMENT_METHOD_ID", referencedColumnName = "id")
     private PaymentMethod paymentMethod;
 
     public int getId() {

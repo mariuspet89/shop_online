@@ -1,4 +1,4 @@
-package com.shop.model.entity;
+package com.shop.model;
 
 import javax.persistence.*;
 
@@ -23,9 +23,13 @@ public class Product {
     @Column(name = "IMAGE", nullable = false)
     private String image;
 
+
+    @ManyToMany
+    @JoinColumn(name = "cart_id", referencedColumnName = "id")
     private Cart cart;
 
-
+    @OneToOne
+    @JoinColumn(name = "provider_id", referencedColumnName = "id")
     private Provider provider;
 
     public int getId() {
