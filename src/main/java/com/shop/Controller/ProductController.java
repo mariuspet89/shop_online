@@ -14,20 +14,20 @@ import java.util.List;
 @CrossOrigin("*")
 @RequestMapping("/product")
 public class ProductController {
-    private final ProductService productService;
+ /*   private final ProductService productService;
 
     @Autowired
     public ProductController(@Qualifier("productServiceImpl") ProductService productService) {
         this.productService = productService;
-    }
+    }*/
 
-    @GetMapping("/concatenateProductProvider/{Id}")
+   /* @GetMapping("/concatenateProductProvider/{Id}")
     public String concatenateProductProvider(@PathVariable("Id") Integer Id){
         return ((ProductServiceImpl) productService).processProviderName(Id);
-    }
+    }*/
 
 
-    @GetMapping("/all")
+  /*  @GetMapping("/all")
     public List<Product> getAllProducts() {
         return productService.getAllProduct();
     }
@@ -42,5 +42,5 @@ public class ProductController {
     public void deleteProduct(@RequestBody Product product) {productService.deleteProduct(product);}
 
     @PutMapping("/{id}")
-    public void updateProduct(@RequestBody Product product) {productService.updateProduct(product);}
+    public void updateProduct(@RequestBody Product product) {productService.updateProduct(product);}*/
 }

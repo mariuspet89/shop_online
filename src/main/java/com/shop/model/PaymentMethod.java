@@ -2,14 +2,15 @@ package com.shop.model;
 
 import javax.persistence.*;
 
+
 @Entity
-@Table(name ="PAYMENT_METHOD")
+@Table(name = "PAYMENT_METHOD")
 public class PaymentMethod {
 
     @Id
     @Column(name = "ID", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column(name = "TYPE", nullable = false)
     private String type;
@@ -17,35 +18,11 @@ public class PaymentMethod {
     @Column(name = "DESCRIPTION", nullable = false)
     private String description;
 
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    @OneToOne
+    @JoinColumn(name = "cart_id")
+    private Cart cart;
 
 
-    public PaymentMethod(int id, String type, String description, Cart cart) {
-        this.id = id;
-        this.type = type;
-        this.description = description;
-    }
+
+
 }

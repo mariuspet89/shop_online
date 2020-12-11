@@ -9,7 +9,7 @@ public class Product {
     @Id
     @Column(name = "ID", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     @Column(name = "NAME", nullable = false)
     private String name;
     @Column(name = "MAKE", nullable = false )
@@ -24,75 +24,13 @@ public class Product {
     private String image;
 
 
-    @ManyToMany
-    @JoinColumn(name = "cart_id", referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "cart_id")
     private Cart cart;
 
-    @OneToOne
-    @JoinColumn(name = "provider_id", referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "provider_id")
     private Provider provider;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getMake() {
-        return make;
-    }
-
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public Provider getProvider() {
-        return provider;
-    }
-
-    public void setProvider(Provider provider) {
-        this.provider = provider;
-    }
 }
