@@ -1,9 +1,6 @@
 package com.shop.model;
 
-import javax.persistence.*;
-import java.util.Date;
-
-@Entity
+/*@Entity
 @Table(name = "DELIVERY")
 public class Delivery {
 
@@ -19,4 +16,48 @@ public class Delivery {
     private Date arrivalTime;
 
 
-}
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public double getFee() {
+        return fee;
+    }
+
+    public void setFee(double fee) {
+        this.fee = fee;
+    }
+
+    public Date getArrivalTime() {
+        return arrivalTime;
+    }
+
+    public void setArrivalTime(Date arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Delivery)) return false;
+        Delivery delivery = (Delivery) o;
+        return Double.compare(delivery.getFee(), getFee()) == 0 && Objects.equals(getId(), delivery.getId()) && Objects.equals(getType(), delivery.getType()) && Objects.equals(getArrivalTime(), delivery.getArrivalTime());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getType(), getFee(), getArrivalTime());
+    }
+}*/

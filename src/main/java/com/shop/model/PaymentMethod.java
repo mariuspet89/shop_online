@@ -1,3 +1,4 @@
+/*
 package com.shop.model;
 
 import javax.persistence.*;
@@ -18,11 +19,11 @@ public class PaymentMethod {
     @Column(name = "DESCRIPTION", nullable = false)
     private String description;
 
-    @OneToOne
+ */
+/*   @OneToOne
     @JoinColumn(name = "cart_id")
-    private Cart cart;
-
-
+    private Cart cart;*//*
 
 
 }
+*/
