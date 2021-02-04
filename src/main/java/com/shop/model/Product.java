@@ -1,10 +1,13 @@
 package com.shop.model;
 
+import org.hibernate.annotations.Proxy;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "PRODUCT")
+@Proxy(lazy = false)
 public class Product {
 
     @Id

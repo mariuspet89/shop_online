@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "PAYMENT_METHOD")
+@Proxy(lazy = false)
 public class PaymentMethod {
 
     @Id

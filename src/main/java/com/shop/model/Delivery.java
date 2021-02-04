@@ -2,6 +2,7 @@ package com.shop.model;
 
 /*@Entity
 @Table(name = "DELIVERY")
+@Proxy(lazy = false)
 public class Delivery {
 
     @Id
